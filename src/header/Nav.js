@@ -7,7 +7,7 @@ const navData = [
 ]
 
 function Nav () {
-  const listItem = navData.map(item=><li key={item.link}><a href={item.link}>{item.text}</a></li>)
+  const listItem = navData.map(item=><li key={item.link} className="nav__item"><a href={item.link} className="nav__link">{item.text}</a></li>)
 
   return (
     <nav className="nav nav--inactive js-nav-header">
