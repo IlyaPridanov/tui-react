@@ -2,8 +2,8 @@ const navData = [
   { "link": "nav1", "text": "Галерея"},
   { "link": "nav2", "text": "Каталог"},
   { "link": "nav3", "text": "Отзывы"},
-  { "link": "nav2", "text": "Консультация"},
-  { "link": "nav3", "text": "Посадка за 1 день"},
+  { "link": "nav4", "text": "Консультация"},
+  { "link": "nav5", "text": "Посадка за 1 день"},
 ]
 
 function Nav () {

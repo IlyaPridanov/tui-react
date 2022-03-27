@@ -1,6 +1,7 @@
 import './sass/App.scss';
 import Header from './header/Header';
-import Main from './main/Main';
+import Main from './main-page/Main';
+import Gallery from './main-page/Gallery';
 
 function App() {
   return (
@@ -8,6 +9,7 @@ function App() {
       <Header/>
       <main>
         <Main/>
+        <Gallery/>
       </main>
     </>
   );
