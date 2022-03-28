@@ -1,12 +1,7 @@
 import './sass/App.scss';
 import Header from './header/Header';
 import Footer from './footer/Footer';
-import MainBlock from './main-page/MainBlock';
-import GalleryMain from './main-page/GalleryMain';
-import CatalogMain from './main-page/CatalogMain';
-import QuestionsMain from './main-page/QuestionsMain';
-import ServicesMain from './main-page/ServicesMain';
-import CommentMain from './main-page/CommentMain';
+
 import Main from './Main';
 import Catalog from './Catalog';
 import OneDay from './OneDay';
@@ -18,23 +13,25 @@ function App() {
   return (
     <>
       <Header/>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element = {<Main/>}></Route>
-          <Route path="/catalog" element = {<Catalog/>}></Route>
-          <Route path="/oneday" element = {<OneDay/>}></Route>
-          <Route path="/reviews" element = {<Reviews/>}></Route>
-          <Route path="/consultation" element = {<Consultation/>}></Route>
-          <Route path="*" element = {<Consultation/>}></Route>
-        </Routes>
-      </BrowserRouter>
       <main>
-        <MainBlock/>
-        <GalleryMain/>
-        <CatalogMain/>
-        <QuestionsMain/>
-        <ServicesMain/>
-        <CommentMain/>
+        <BrowserRouter>
+          {/* <nav>
+            <li><Link to="/">Главная</Link></li>
+            <li><Link to="/catalog">Каталог</Link></li>
+            <li><Link to="/oneday">Отзывы</Link></li>
+            <li><Link to="/reviews">Консультация</Link></li>
+            <li><Link to="/consultation">Посадка за 1 день</Link></li>
+            
+          </nav> */}
+          <Routes>
+            <Route path="/" element = {<Main/>}></Route>
+            <Route path="/catalog" element = {<Catalog/>}></Route>
+            <Route path="/oneday" element = {<OneDay/>}></Route>
+            <Route path="/reviews" element = {<Reviews/>}></Route>
+            <Route path="/consultation" element = {<Consultation/>}></Route>
+            <Route path="*" element = {<Consultation/>}></Route>
+          </Routes>
+        </BrowserRouter>
       </main>
       <Footer/>
     </>
