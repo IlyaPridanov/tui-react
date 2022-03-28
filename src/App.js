@@ -7,14 +7,15 @@ import Catalog from './Catalog';
 import OneDay from './OneDay';
 import Reviews from './Reviews';
 import Consultation from './Consultation';
-import { Route, BrowserRouter, Routes, Link } from 'react-router-dom';
+import ErrorPage from './ErrorPage';
+import { Route, Routes } from 'react-router-dom';
 
 function App() {
   return (
     <>
       <Header/>
       <main>
-        <BrowserRouter>
+        {/* <BrowserRouter> */}
           {/* <nav>
             <li><Link to="/">Главная</Link></li>
             <li><Link to="/catalog">Каталог</Link></li>
@@ -29,9 +30,9 @@ function App() {
             <Route path="/oneday" element = {<OneDay/>}></Route>
             <Route path="/reviews" element = {<Reviews/>}></Route>
             <Route path="/consultation" element = {<Consultation/>}></Route>
-            <Route path="*" element = {<Consultation/>}></Route>
+            <Route path="*" element = {<ErrorPage/>}></Route>
           </Routes>
-        </BrowserRouter>
+        {/* </BrowserRouter> */}
       </main>
       <Footer/>
     </>
