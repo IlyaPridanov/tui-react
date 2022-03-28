@@ -12,7 +12,7 @@ import webp6 from './../img/inside-nursery-6.webp';
 import png6 from './../img/inside-nursery-6.png';
 
 
-function Gallery () {
+function GalleryMain () {
   const imgArr = [
     {
       "webp": webp1,
@@ -47,7 +47,7 @@ function Gallery () {
         <div className="gallery__row fancy-container">
           {
             imgArr.map((itemImg , index) => 
-              <div className="gallery__img fancy-img" data-index={index}>
+              <div className="gallery__img fancy-img" data-index={index} key={itemImg.png}>
                 <picture>
                   <source srcSet={itemImg.webp} type="image/webp"/>
                   <img src={itemImg.png} alt="питомник изнутри фото"/>
@@ -55,20 +55,6 @@ function Gallery () {
               </div>
             )
           }
-          {/* <div className="gallery__img fancy-img" data-index="1">
-            <picture>
-              <source srcSet={imgArr[1].webp} type="image/webp"/>
-              <img src={imgArr[1].png} alt="питомник изнутри фото"/>
-            </picture>
-          </div>
-          <div className="gallery__img fancy-img" data-index="2">
-            <picture>
-              <source srcSet={imgArr[2].webp} type="image/webp"/>
-              <img src={imgArr[2].png} alt="питомник изнутри фото"/>
-            </picture>
-          </div> */}
-          
-
         </div>
         <button className="gallery__btn hidden" type="button">Посмотреть ещё</button>
       </div>
@@ -76,4 +62,4 @@ function Gallery () {
   );
 }
 
-export default Gallery;
+export default GalleryMain;
