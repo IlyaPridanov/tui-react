@@ -1,17 +1,6 @@
 import MainForm from './MainForm';
 
 function Main () {
-  document.addEventListener("DOMContentLoaded", () => {
-      const header = document.querySelector('.header');
-      const main = document.querySelector('.main');
-
-      let headerHeight = header.offsetHeight + 'px';
-
-      main.style.marginTop = '-' + headerHeight;
-      main.style.paddingTop = headerHeight;
-      console.log(headerHeight);
-  });
-  
   return (
     <section className="main">
       <div className="container main__row">

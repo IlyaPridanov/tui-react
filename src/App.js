@@ -2,11 +2,12 @@ import './sass/App.scss';
 import Header from './header/Header';
 import Footer from './footer/Footer';
 
-import Main from './Main';
-import Catalog from './Catalog';
-import OneDay from './OneDay';
-import Reviews from './Reviews';
-import Consultation from './Consultation';
+import Main from './main-page/Main';
+import Catalog from './catalog-page/Catalog';
+import CatalogId from './catalog-page/CatalogId';
+import OneDay from './oneday-page/OneDay';
+import Reviews from './reviews-page/Reviews';
+import Consultation from './consultation-page/Consultation';
 import ErrorPage from './ErrorPage';
 import { Route, Routes } from 'react-router-dom';
 
@@ -16,17 +17,10 @@ function App() {
       <Header/>
       <main>
         {/* <BrowserRouter> */}
-          {/* <nav>
-            <li><Link to="/">Главная</Link></li>
-            <li><Link to="/catalog">Каталог</Link></li>
-            <li><Link to="/oneday">Отзывы</Link></li>
-            <li><Link to="/reviews">Консультация</Link></li>
-            <li><Link to="/consultation">Посадка за 1 день</Link></li>
-            
-          </nav> */}
           <Routes>
             <Route path="/" element = {<Main/>}></Route>
             <Route path="/catalog" element = {<Catalog/>}></Route>
+            <Route path="/catalog/:catalogName" element = {<CatalogId/>}></Route>
             <Route path="/oneday" element = {<OneDay/>}></Route>
             <Route path="/reviews" element = {<Reviews/>}></Route>
             <Route path="/consultation" element = {<Consultation/>}></Route>

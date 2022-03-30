@@ -1,7 +1,12 @@
+// import HeaderTop from './../modules/HeaderTop';
 import Nav from './Nav';
 import {ReactComponent as Logo} from '../img/icon-logo.svg';
 
 function Header () {
+  // document.addEventListener("DOMContentLoaded", () => {
+  //   HeaderTop();
+  // });
+  
   return (
     <header className="header">
       <div className="container header__row">
