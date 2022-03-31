@@ -2,6 +2,7 @@ import {ReactComponent as Logo} from '../img/icon-logo.svg';
 import {ReactComponent as Facebook} from '../img/icon-fb.svg';
 import {ReactComponent as Insta} from '../img/icon-insta.svg';
 import {ReactComponent as Vk} from '../img/icon-vk.svg';
+import { NavLink} from 'react-router-dom';
 
 function Footer () {
   const socArr = [
@@ -20,11 +21,26 @@ function Footer () {
   ]
 
   const linkArr = [
-    "Главная",
-    "Каталог",
-    "Отзывы",
-    "Консультация",
-    "Посадка за 1 день",
+    {
+      name: "Главная",
+      link: "/",
+    },
+    {
+      name: "Каталог",
+      link: "/catalog",
+    },
+    {
+      name: "Отзывы",
+      link: "/reviews",
+    },
+    {
+      name: "Консультация",
+      link: "/consultation",
+    },
+    {
+      name: "Посадка за 1 день",
+      link: "/oneday",
+    },
   ]
 
   return (
@@ -41,8 +57,8 @@ function Footer () {
           <ul className="footer__list">
             {
               linkArr.map((itemLink) => 
-                <li className="footer__item" key={itemLink}>
-                  <a className="footer__item-link" href="#">{itemLink}</a>
+                <li className="footer__item" key={itemLink.name}>
+                  <NavLink className="footer__item-link" to={itemLink.link}>{itemLink.name}</NavLink>
                 </li>
               )
             }

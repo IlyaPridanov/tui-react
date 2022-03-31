@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { NavLink} from 'react-router-dom';
 
 const navData = [
   { "link": "/", "text": "Главная"},
@@ -10,7 +10,11 @@ const navData = [
 
 function Nav () {
   // const listItem = navData.map(item=><li key={item.link} className="nav__item"><a href={item.link} className="nav__link">{item.text}</a></li>)
-  const listItem = navData.map(item=><li key={item.link} className="nav__item"><Link to={item.link} className="nav__link">{item.text}</Link></li>)
+  const listItem = navData.map( item=>
+    <li key={item.link} className="nav__item">
+      <NavLink to={item.link} className="nav__link">{item.text}</NavLink>
+    </li>
+  )
 
   return (
     <nav className="nav nav--inactive js-nav-header">

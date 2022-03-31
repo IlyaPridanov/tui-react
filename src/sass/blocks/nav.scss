@@ -26,6 +26,11 @@
     letter-spacing: -0.025em;
     text-decoration: none;
     color: $primary-color;
+    text-decoration: none;
+
+    &.active {
+        text-decoration: underline;
+    }
 }
 
 @media(max-width:$min-desktop) {

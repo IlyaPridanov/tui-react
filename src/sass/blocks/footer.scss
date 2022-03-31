@@ -5,6 +5,26 @@
 .footer__row {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+
+    @media screen and (max-width: 768px) {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    @media screen and (max-width: 576px) {
+        display: block;
+    }
+}
+
+.footer__column {
+    &:last-child {
+        @media screen and (max-width: 1440px) {
+            justify-self: end;
+        }
+
+        @media screen and (max-width: 768px) {
+            justify-self: start;
+        }
+    }
 }
 
 .footer__logo {
@@ -147,6 +167,10 @@
         background-color: $secondary-color;
         border-color: $secondary-color;
         transition: $transition;
+    }
+
+    @media screen and (max-width: 1440px) {
+        margin-bottom: 25px;
     }
 }
 
