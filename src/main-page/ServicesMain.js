@@ -7,6 +7,8 @@ import png3 from './../img/planting-3.png';
 import webp4 from './../img/planting-4.webp';
 import png4 from './../img/planting-4.png';
 
+import { Link } from 'react-router-dom';
+
 
 function ServicesMain () {
   const imgArr = [
@@ -40,7 +42,7 @@ function ServicesMain () {
 
     <section className="services">
       <div className="container">
-        <h2 className="services__caption h2">Посадим туи<a href="#">&nbsp;за 1 день</a></h2>
+        <h2 className="services__caption h2">Посадим туи<Link to="/oneday">&nbsp;за 1 день</Link></h2>
         <ul className="services__list">
           {
             imgArr.map((itemImg , index) => 

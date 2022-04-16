@@ -9,6 +9,8 @@ import png4 from './../img/catalog-4.png';
 import webp5 from './../img/catalog-5.webp';
 import png5 from './../img/catalog-5.png';
 
+import { Link } from 'react-router-dom';
+
 
 function CatalogMain () {
   const imgArr = [
@@ -53,7 +55,7 @@ function CatalogMain () {
 
     <section className="catalog">
       <div className="container">
-        <h2 className="catalog__caption h2"><a href="#">Каталог&nbsp;</a>туй</h2>
+        <h2 className="catalog__caption h2"><Link to="/catalog">Каталог&nbsp;</Link>туй</h2>
         <ul className="catalog__list fancy-container">
           {
             imgArr.map((itemImg , index) => 

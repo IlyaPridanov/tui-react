@@ -6,7 +6,6 @@ function Header () {
   // document.addEventListener("DOMContentLoaded", () => {
   //   HeaderTop();
   // });
-  
   return (
     <header className="header">
       <div className="container header__row">

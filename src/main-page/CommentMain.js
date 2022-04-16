@@ -9,6 +9,8 @@ import png4 from './../img/review-4.png';
 import webp5 from './../img/review-5.webp';
 import png5 from './../img/review-5.png';
 
+import { Link } from 'react-router-dom';
+
 function CommentMain () {
   const commentArr = [
     {
@@ -40,7 +42,7 @@ function CommentMain () {
   return (
     <section className="comment slider">
       <div className="container">
-        <h2 className="comment__caption h2">Почитайте, что говорят&nbsp;<a href="#">наши</a>&nbsp;клиенты</h2>
+        <h2 className="comment__caption h2">Почитайте, что говорят&nbsp;<Link to="/reviews">наши</Link>&nbsp;клиенты</h2>
         <div className="swiper-container">
           <div className="swiper-wrapper">
             {
